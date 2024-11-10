@@ -1,0 +1,410 @@
+/* Reset some basic styles */
+* {
+    margin: 0px auto;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+/* 全局圖片樣式調整 */
+img :not(.carousel-item img) {
+    max-width: 200px; /* 確保圖片不會超過父容器寬度 */
+    height: 200px; /* 自動調整高度，保持比例 */
+    object-fit: cover; /* 保持圖片不變形 */
+    border-radius: 8px; /* 添加圓角，根據需求調整 */
+}
+
+
+body {
+    background-color:whitesmoke;
+    color: #22223b;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #4a4e69;
+    color: white;
+    padding: 1rem ;
+    text-align: center;
+}
+
+header h1 {
+    font-family:"Gamja Flower" ;
+    font-size: 3rem;
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: hsla(286, 38%, 75%, 0.732);
+    color: #f2e9e4;
+    border-radius: 60px;
+
+}
+/*輪播效果*/
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 300%;
+    animation: slide 15s infinite;
+}
+
+.carousel-item {
+    width: 100%;
+    flex: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(0); }
+    66% { transform: translateX(-100%); }
+    100% { transform: translateX(-200); }
+
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+  
+}
+
+/* Section styling */
+#about {
+    background-color: #9a8c98;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap; /* 支持多行換行 */
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+/*個人介紹*/
+section h2 {
+    font-size: 2.0rem;
+    color: #22223b;
+    border-bottom: 2px solid #5a5f7d;
+    width: 200px;
+}
+/*座右銘*/
+section h3{
+    width: 250px;
+    color: #4a4e69;
+    border-radius: 10px 30px;
+    font-size: 15px;
+    border: 2px solid #4a4e69;
+    text-align: center;
+    font-family:Gamja Flower ;
+    letter-spacing: 0.05rem;
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px; /* 適當的上下間距 */
+    margin-bottom: 10px; /* 避免上下元素重疊 */
+        
+    }
+    
+
+/*個人資料*/
+.profile-info{
+    font-size: large;
+    margin-top: 10px;
+  
+
+}
+
+/*驚喜區塊*/
+.intro-box {
+    display: flex;
+    flex-direction:  row-reverse; /* 將圖片和文字水平排列 */
+    align-items:center; /* 垂直居中對齊 */
+    background-color: #f2e9e4;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family:"Gamja Flower" ;
+    margin-right: -5px;
+}
+.intro-text p{
+    text-align: center;
+   padding-left: 20px;
+  
+
+}
+.hover-image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.hover-image-container img {
+    opacity: 0;
+    object-fit: cover; 
+    position: relative;
+}
+
+.hover-image-container:hover img {
+    opacity: 1; /* 保留圖片的懸停效果 */
+}
+
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #333;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+
+ /*專業技能*/
+#skills{
+    display: flex;
+    justify-content: space-around; /* 控制兩個區塊之間的水平間距 */
+    padding: 50px;
+    height: 400px;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+    /* 調整各技能項目的上下間距 */
+#skills label,#skills progress {
+    margin-top: 20px; /* 增加每個技能項目的上間距 */
+    width: 200;
+    accent-color: #4a4e69;/*進度條顏色*/
+    padding-top: 0px;
+
+}
+
+
+/*個人經歷*/
+#experience {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 20px;
+    padding: 20ox;
+    
+}
+#experience h3
+    {color: #0a0303;
+        gap: 20px;
+        margin-top: 30px;
+       
+ }
+    
+    #left-block {
+        background-color: #f9f9f9;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        
+        
+    }
+    .right-block {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 20px; /* 段落間隙設置 */
+       
+    }
+    h2, h3 {
+        color: #22223b;
+        font-size: 1.5em;
+        margin-bottom:  10px;
+    }
+    .education-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .education-item img {
+    width: 100%;
+    border-radius: 8px;
+    }
+    .education-content p {
+        margin: 5px 0;
+    }
+    .job {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        gap: 15px;
+        margin-bottom: 20px;
+       
+    }
+    
+    .job img {
+        width: 100%;
+        margin-right: 15px;/* 圖片與文字之間的間距 */
+
+    }
+    
+    .daily-life-section {
+        margin-top: 30px;
+        background-color: #fffbe6;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    .daily-life-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .photo-gallery {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .photo-gallery img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .photo-gallery img:hover {
+        transform: scale(1.1);
+    }
+    @media (max-width: 1024px) {
+        #experience {
+            transform: scale(0.9); /* 縮小整個區塊 */
+            transform-origin: top;
+        }
+    }
+    
+    /* 小螢幕（手機） */
+    @media (max-width: 768px) {
+        #experience {
+            transform: scale(0.8); /* 進一步縮小 */
+            transform-origin: top;
+            margin: auto;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        #experience {
+            transform: scale(0.7); /* 更小的螢幕再縮小 */
+            transform-origin: top;
+        }
+    }
+
+/* Aside styling */
+aside {
+    background-color: #4a4e69;
+    color: #f2e9e4;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-left: 4px solid #8589a3;
+    
+    
+}
+
+aside h3 {
+    font-size: 1.5rem;
+    color: #f2e9e4;
+}
+aside img {
+    width: 20%; /* 圖片寬度填滿側邊欄 */
+    height: auto; /* 保持圖片原比例 */
+    border-radius: 8px; /* 添加圓角 */
+    margin-top: 10px; /* 圖片與標題之間的距離 */
+}
+
+
+
+/*社群連結*/
+.email-icon {
+    width: 50px; 
+    height: auto; 
+    cursor: pointer; 
+    
+}
+
+.line-icon {
+    width: 50px; 
+    height: auto; 
+    cursor: pointer;
+}
+.phone-icon {
+    width: 45px; 
+    height: auto; 
+    cursor: pointer;
+    margin-top: -10px; 
+}
+.instagram-icon {
+    width: 40px; 
+    height: auto; 
+    cursor: pointer; 
+    margin-top: -5px; 
+}
+@media (max-width: 768px) {
+    #about {
+        transform: scale(0.9); /* 縮小整個區塊 */
+        flex-direction: column;
+       
+    }
+    
+    #experience {
+        grid-template-columns: 1fr;
+    }
+    
+    #skills {
+        margin-top: 20%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-item {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .carousel-inner {
+        width: 200%;
+        animation: slide 10s infinite;
+    }
+
+    .intro-box {
+        margin:auto
+    }
+}
+
+
+@media (max-width: 480px) {
+    #experience {
+        transform: scale(0.7); /* 更小的螢幕再縮小 */
+        transform-origin: top;
+    }
+}
